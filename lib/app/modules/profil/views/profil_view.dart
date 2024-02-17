@@ -23,6 +23,13 @@ class _ProfilViewState extends State<ProfilView> with TickerProviderStateMixin {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.arrow_back_ios,
+                        size: 20,
+                      ),
+                    ),
                     Text(
                       "${controller.user['data']['name']}",
                       style: TextStyle(

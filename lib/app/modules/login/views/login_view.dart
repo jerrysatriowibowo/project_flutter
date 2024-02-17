@@ -53,7 +53,7 @@ class LoginView extends GetView<LoginController> {
             Obx(() => controller.showOption.value
                 ? GestureDetector(
                     onTap: () {
-                      controller.showOption(false);
+                      controller.showOption(true);
                     },
                     child: const Icon(
                       Icons.close,

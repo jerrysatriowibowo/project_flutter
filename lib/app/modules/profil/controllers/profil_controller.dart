@@ -28,6 +28,7 @@ class ProfilController extends GetxController with SingleGetTickerProviderMixin 
     try {
       SharedPreferences localStorage = await SharedPreferences.getInstance();
       var token = localStorage.getString('token');
+      var userId = localStorage.getInt('id');
 
       if (token == null) {
         throw Exception('Token not found');
@@ -35,7 +36,7 @@ class ProfilController extends GetxController with SingleGetTickerProviderMixin 
 
       var headers = {'Authorization': 'Bearer $token'};
 
-      var apiUrl = '/user/1';
+      var apiUrl = '/user/${userId}';
       var response = await http.get(
         Uri.parse(Api.baseUrl + apiUrl),
         headers: headers,

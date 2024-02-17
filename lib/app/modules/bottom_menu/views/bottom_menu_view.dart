@@ -13,7 +13,7 @@ class BottomMenuView extends GetView<BottomMenuController> {
       body: Obx(() => IndexedStack(
         index: controller.currentIndex.value,
         children: [
-          HomeView(), 
+          HomeView(),
           ProfilView()
           ],
         )
